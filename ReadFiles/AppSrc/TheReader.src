@@ -1,0 +1,40 @@
+Use DFAllEnt.pkg
+Use cCJStandardCommandBarSystem.pkg
+
+Object oHtmlHelp is a cHtmlHelp
+End_Object
+
+Object oApplication is a cApplication
+    Set peHelpType to htHtmlHelp
+End_Object
+
+Object oToolTipController is a cToolTipController
+    Move Self to ghoToolTipController
+End_Object
+
+Use oEditContextMenu.pkg
+Use oDEOEditContextMenu17.pkg
+
+Object oMain is a Panel
+    Set Label to "The Reader"
+    Set Location to 0 0
+    Set Size to 170 315
+    Set piMinSize to 170 315
+    Set piMaxSize to 170 315
+    Set Locate_Mode to Center_On_Screen
+    
+    Object oClientArea is a ClientArea
+        Use StdAbout.pkg
+        Use ReadFromDir.vw
+
+        Procedure Activate_About
+            Send DoAbout "" "" "" "" ""
+        End_Procedure
+
+    End_Object
+
+End_Object
+
+Send Activate_oReadFromDir of (oClientArea(oMain))
+
+Start_UI

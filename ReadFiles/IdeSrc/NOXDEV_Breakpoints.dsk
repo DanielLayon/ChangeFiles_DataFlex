@@ -1,0 +1,9 @@
+[C:\DataFlex Projects\ReadFiles\AppSrc\ReadFromDir.vw]
+Source152=Direct_Input channel 1 sPath
+ConditionEnabled152=0
+Condition152= 
+152=1
+Source167=Direct_Output channel 2 sPath
+ConditionEnabled167=0
+Condition167= 
+167=1
